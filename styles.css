@@ -4,24 +4,23 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: white;
+    background-color: #d5ecd2;
     text-align: center;
     gap: 20px;
 }
 
 
-
 h1 {
-    font-family: 'Fredoka-SemiBold', sans-serif;
-    color: #78b0d4;
+    font-family: 'Fredoka-Medium', sans-serif;
+    color: #7dc079;
     margin: 0;
     text-align: center;
     font-size: clamp(1.5rem, 5vw, 3em); /* Fully responsive */
 }
 
 @font-face {
-    font-family: 'Fredoka-SemiBold';
-    src: url('fonts/Fredoka-SemiBold.ttf') format('truetype');
+    font-family: 'Fredoka-Medium';
+    src: url('Fredoka-Medium.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -46,7 +45,7 @@ h1 {
     cursor: pointer; /* Changes the mouse cursor to indicate that the card is clickable */
     flex-shrink: 0; /* Prevents cards from shrinking */
     margin-bottom: 10px; /* Adds space between rows */
-    border-radius: 10px/* Fully round the card to create a circle */
+    border-radius: 10px; /* Fully round the card to create a circle */
 }
 
 
@@ -83,3 +82,12 @@ Since .card-back was already rotated 180 degrees initially, this second rotation
 /* This only rotates the back side of the card before any flipping happens.
 It ensures that the back of the card starts off rotated so that it’s facing away (hidden) initially.
 Without this, the front and back would both be facing the same direction, and you wouldn't get a proper flip effect. */
+
+
+.card-front {
+    z-index: 2; /* Ensures the front stays on top initially */
+}
+
+.card-back {
+    z-index: 1;
+}
