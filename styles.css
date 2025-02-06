@@ -4,7 +4,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: ;
+    background-color: white;
     text-align: center;
     gap: 20px;
 }
@@ -48,42 +48,6 @@ h1 {
     margin-bottom: 10px; /* Adds space between rows */
     border-radius: 10px/* Fully round the card to create a circle */
 }
-}
-/* For smaller screens (<= 768px), show two cards per row */
-@media (max-width: 768px) {
-    .tarot-container {
-        justify-content: center; /* Centers cards on smaller screens */
-        
-    }
-
-    .card {
-        width: calc(50% - 5px); /* 2 cards per row, accounting for the 20px gap */
-        height: auto; /* Adjust height proportionally */
-
-    }
-    h1 {
-        font-size: 1.5rem;
-    
-    }
-}
-
-/* For very small screens (<= 480px), show one card per row */
-@media (max-width: 480px) {
-    .tarot-container {
-        justify-content: center; /* Centers cards on smaller screens */
-    }
-
-    .card {
-        width: calc(100% - 10px); /* 1 card per row, accounting for the 20px gap */        
-        height: auto; /* Adjust height proportionally */
-        gap: 5px;
-    }
-    h1 {
-
-        font-size: 1rem;
-    }
-}
-
 
 
 .card-inner {
